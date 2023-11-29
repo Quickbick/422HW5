@@ -35,9 +35,9 @@ public class IDoShopping {
         firstItem.click();
         WebElement addToCart = driver.findElement(By.className("btn_green_steamui"));
         addToCart.click();
-        //Steam takes you to cart when you add something, but this should do it anyway in case it doesn't
-        WebElement cart = driver.findElement(By.id("cart_link"));
-        cart.click();
+        //this last step takes you to a sign in page because you must sign in to check out
+        WebElement purchase = driver.findElement(By.cssSelector("#btn_purchase_self"));
+        purchase.click();
     }
 
 }
